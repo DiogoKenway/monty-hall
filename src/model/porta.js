@@ -27,7 +27,7 @@ class Porta {
     }
 
     desselecionar() {
-        const selecionado = !this.#selecionada;
+        const selecionado = false;
         return new Porta(this.numero, this.temPresente, selecionado, this.aberta)
     }
 
