@@ -42,8 +42,3 @@ class Porta {
     }
 }
 
-const p1 = new Porta(1);
-// console.log(p1.alternarSelecao());
-console.log(p1.alternarSelecao()); 
-console.log(p1.alternarSelecao()); 
-console.log(p1.alternarSelecao()); 
