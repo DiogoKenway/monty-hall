@@ -26,8 +26,8 @@ export default class Porta {
         return this.#aberta;
     }
 
-    desselecionar() {
-        const selecionado = false;
+    desselecionar(): object {
+        const selecionado: boolean = false;
         return new Porta(this.numero, this.temPresente, selecionado, this.aberta)
     }
 
@@ -36,7 +36,7 @@ export default class Porta {
         return new Porta(this.numero, this.temPresente, selecionado, this.aberta)
     }
 
-    abrir() {
+    abrir() : object {
         const aberto = true;
         return new Porta(this.numero, this.temPresente, this.selecionada, aberto)
     }
