@@ -1,8 +1,8 @@
-class Porta {
-    #numero;
-    #temPresente;
-    #selecionada;
-    #aberta;
+export default class Porta {
+    #numero: number;
+    #temPresente: boolean;
+    #selecionada: boolean;
+    #aberta: boolean;
 
     constructor (numero, temPresente = false, selecionada = false, aberta = false) {
         this.#numero = numero;
@@ -11,19 +11,19 @@ class Porta {
         this.#aberta = aberta;
     }
 
-    get numero() {
-        this.#numero;
+    get numero() :number{
+        return this.#numero;
     }
 
-    get temPresente() {
-        this.#temPresente;
+    get temPresente() : boolean{
+        return this.#temPresente;
     }
 
-    get selecionada() {
-        this.#selecionada;
+    get selecionada() : boolean {
+        return this.#selecionada;
     }
-    get aberta() {
-        this.#aberta;
+    get aberta() : boolean{
+        return this.#aberta;
     }
 
     desselecionar() {
@@ -31,14 +31,14 @@ class Porta {
         return new Porta(this.numero, this.temPresente, selecionado, this.aberta)
     }
 
-    alternarSelecao() {
+    alternarSelecao() : object{
         const selecionado = !this.#selecionada;
         return new Porta(this.numero, this.temPresente, selecionado, this.aberta)
     }
 
     abrir() {
         const aberto = true;
-        return new Porta(this.numero, this.temPresente, selecionado, aberto)
+        return new Porta(this.numero, this.temPresente, this.selecionada, aberto)
     }
 }
 
