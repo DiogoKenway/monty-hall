@@ -2,7 +2,6 @@ import { useState } from "react";
 import Porta from "../components/Porta";
 import criarPortas, { atualizarPortas } from "../functions/portas";
 import PortaModel from "../model/porta";
-// import Presente from "@/components/Presente";
 
 export default function Home() {
 

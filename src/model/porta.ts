@@ -22,8 +22,12 @@ export default class PortaModel {
     get selecionada() : boolean {
         return this.#selecionada;
     }
+
     get aberta() : boolean{
         return this.#aberta;
+    }
+    get fechada() : boolean{
+        return !this.#aberta;
     }
 
     desselecionar(): object {
