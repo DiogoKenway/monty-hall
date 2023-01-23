@@ -38,6 +38,8 @@ export default class PortaModel {
 
     abrir() : object {
         const aberto = true;
+        console.log(aberto);
+        
         return new PortaModel(this.numero, this.temPresente, this.selecionada, aberto)
     }
 }
