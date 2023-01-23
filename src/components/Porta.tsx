@@ -3,9 +3,10 @@ import PortaModel from "../model/porta";
 
 interface PortaProps {
     value: PortaModel;
+    onChange: (novaPorta: PortaModel) => void
 }
 
-export default function Porta( { value } : PortaProps) {
+export default function Porta({ value } : PortaProps) {
 
     const selecionada = value.selecionada ? styles.selecionada : "";
 
