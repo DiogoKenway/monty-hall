@@ -11,8 +11,7 @@ export default function Home() {
   return (
     <div style={{ display: "flex", gap: "1rem", flexDirection: "column" }}>
       <input type="text" value={texto} onChange={e => setTexto(e.target.value)}/>
-      <Porta value={p1} onChange={novaPorta => setP1(novaPorta)
-      }/>
+      <Porta value={p1} onChange={novaPorta => setP1(novaPorta)}/>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import PortaModel from "../model/porta";
 
 interface PortaProps {
     value: PortaModel;
-    onChange: (novaPorta: PortaModel) => void
+    onChange: (porta) => void
 }
 
 export default function Porta( props : PortaProps) {
