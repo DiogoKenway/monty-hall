@@ -16,7 +16,7 @@ export function atualizarPortas(portas: PortaModel[], portaModificada: PortaMode
         if(igualModificada) {
             return portaModificada;
         } else {
-            return portaAtual;
+            return portaModificada.aberta ? portaAtual : portaAtual.desselecionar()
         }
     })
 }
