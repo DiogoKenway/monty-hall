@@ -9,7 +9,6 @@ export default function Home() {
 
   return (
     <div style={{ display: "flex", gap: "1rem" }}>
-      {/* <Presente /> */}
       <Porta porta={p1}/>
     </div>
   )
