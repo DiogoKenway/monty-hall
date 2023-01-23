@@ -2,18 +2,18 @@ import styles from "../styles/Porta.module.css";
 import PortaModel from "../model/porta";
 
 interface PortaProps {
-    porta: PortaModel;
+    value: PortaModel;
 }
 
-export default function Porta( { porta } : PortaProps) {
+export default function Porta( { value } : PortaProps) {
 
-    const selecionada = porta.selecionada ? styles.selecionada : "";
+    const selecionada = value.selecionada ? styles.selecionada : "";
 
     return (
         <div className={styles.area}>
             <div className={`${styles.estrutura} ${selecionada}`}>
                 <div className={styles.porta}>
-                    <div className={styles.numero} >{porta.numero}</div>
+                    <div className={styles.numero} >{value.numero}</div>
                     <div className={styles.macaneta} />
                 </div>
             </div>
