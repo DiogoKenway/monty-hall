@@ -5,7 +5,7 @@ import styles from "../styles/jogo.module.css";
 
 export default function jogo() {
 
-  const [portas, setPortas] = useState(criarPortas(5, 3));
+  const [portas, setPortas] = useState(criarPortas(10, 3));
 
   function renderizarPortas() {
     return portas.map((porta, i) => (
@@ -16,7 +16,9 @@ export default function jogo() {
 
   return (
     <div className={styles.jogo}>
-        {renderizarPortas()}
+        <div className={styles.porta}>
+            {renderizarPortas()}
+        </div>
     </div>
   )
 }
