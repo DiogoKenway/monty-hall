@@ -1,11 +1,9 @@
 import { useState } from "react";
 import Porta from "../components/Porta";
 import criarPortas, { atualizarPortas } from "../functions/portas";
-import PortaModel from "../model/porta";
 
 export default function Home() {
 
-  const [p1, setP1] = useState(new PortaModel(1));
   const [portas, setPortas] = useState(criarPortas(5, 3));
 
   function renderizarPortas() {
