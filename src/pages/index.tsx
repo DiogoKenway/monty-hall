@@ -1,8 +1,9 @@
-import Cartao from "../components/Cartao"
+import styles from "../styles/formulario.module.css";
+import Cartao from "../components/Cartao";
 
 export default function Formulario() {
   return (
-    <div>
+    <div className={styles.formulario}>
         <Cartao />
     </div>
   )
