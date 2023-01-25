@@ -1,11 +1,9 @@
-import { useState } from "react";
-import Porta from "../components/Porta";
-import criarPortas, { atualizarPortas } from "../functions/portas";
+import Cartao from "../components/Cartao"
 
-export default function Home() {
+export default function Formulario() {
   return (
-    <div style={{ display: "flex", gap: "1rem"}}>
-        <h1>Formulário de ínicio!!!</h1>
+    <div>
+        <Cartao />
     </div>
   )
 }
