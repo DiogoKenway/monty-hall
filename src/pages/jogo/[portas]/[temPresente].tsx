@@ -9,8 +9,20 @@ export default function jogo() {
 
   const router = useRouter();
 
+  const [valido, setValido] = useState(false);
   const [portas, setPortas] = useState([]);
 
+  useEffect(()=> {
+    const qtdPortas = +router.query.portas;
+    const temPresente = +router.query.temPresente;
+    
+    const portaValida = qtdPortas >= 3 && qtdPortas <= 100;
+    const presenteValido = temPresente >= 1 && temPresente <= qtdPortas;
+
+    setValido(portaValida && presenteValido);
+
+  }, [portas])
+  
   useEffect(()=> {
     const qtdPortas = +router.query.portas;
     const temPresente = +router.query.temPresente;
@@ -21,7 +33,7 @@ export default function jogo() {
   
 
   function renderizarPortas() {
-    return portas.map((porta, i) => (
+    return portas.map(porta => (
       <Porta key={porta.numero} value={porta}
        onChange={novaPorta => setPortas(atualizarPortas(portas, novaPorta))}/>
     ))
@@ -30,7 +42,7 @@ export default function jogo() {
   return (
     <div className={styles.jogo}>
         <div className={styles.porta}>
-            {renderizarPortas()}
+            { valido ? renderizarPortas() : <h1>Valores Inválidos</h1>}
         </div>
 
         <div className={styles.botoes}>
